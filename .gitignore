@@ -1,0 +1,16 @@
+build/
+pyenv2/
+pyenv3/
+
+*.zip
+
+.DS_Store
+
+log
+.vscode/
+__pycache__
+*.pyc
+*~
+*.sqlite3
+
+*.env
