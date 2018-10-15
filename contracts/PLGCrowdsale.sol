@@ -188,4 +188,8 @@ contract PLGCrowdsale is Ownable {
         return saleActive && nonZeroPurchase && isMinPurchase;
     }
 
+    /// @notice Check if it is valid Crowdsale contracts
+    function validCrowdsale() public view returns (bool) {
+        return true;
+    }
 }

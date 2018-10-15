@@ -30,6 +30,10 @@ contract PLGToken is Ownable, NoOwner, LockableToken {
     function initialize(address[] addresses, uint256[] allocations) public onlyOwner {
         require(!initialized);
         require(addresses.length == allocations.length);
+        for(uint i = 0; i<allocations.length; i += 1) {
+            require(addresses[i] != address(0));
+            require(allocations[i] > 0);
+        }
         initialized = true;
 
         for(uint i = 0; i<allocations.length; i += 1) {
